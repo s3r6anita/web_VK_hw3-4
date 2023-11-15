@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Don't ask me twice</title>
+  <link rel="stylesheet" href="../static/css/bootstrap.css">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <script src="../static/js/bootstrap.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light my-0 border-bottom">
+
+    <div class="col-2 my-0" id="block-title">
+        <a class="navbar-brand mx-sm-2"><b>Don't ask me twice</b></a>
+    </div>
+
+    <div class="col-8 navbar-collapse collapse" id="navbarNav">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Find your question" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+
+    <div class="col-2 d-flex flex-row align-items-center header-profile">
+      <div class="user-actions">
+          <a class="mx-sm-2 user-action" href="">Log in</a>
+          <a class="mx-sm-2 user-action" href="">Sign up</a>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="flex-shrink-0">
+    <div class="row mx-5">
+
+      <div class="col-9 my-3">
+
+
+<!--   Начало формы регистрации     -->
+
+
+        <div class="row mx-2">
+          <div class="mt-3">
+            <h2>Log in</h2>
+          </div>
+            <form>
+              <div class="alert alert-danger mt-2 errorMsg" role="alert">
+                Wrong login!
+              </div>
+              <div class="alert alert-danger mt-2 errorMsg" role="alert">
+                Wrong password!
+              </div>
+              <div class="form-group mt-3">
+                <label for="login">Login:</label>
+                <input type="text" class="form-control mt-1" id="login" placeholder="Enter you login here" style="width: 20rem;">
+              </div>
+              <div class="form-group mt-3">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control mt-1" id="password" placeholder="Enter you password here" style="width: 20rem;">
+              </div>
+              <button type="submit" class="btn btn-primary mt-4" style="width: 5em">Log in</button>
+            </form>
+          <div class="mt-3">
+            <a class="" href="#">Create new account</a>
+          </div>
+        </div>
+
+      </div>
+
+
+<!--   Конец формы регистрации     -->
+
+
+      <div class="col-3 my-3">
+        <div class="m-3 row">
+          <h3>Popular Tags</h3>
+          <div class="d-flex flex-wrap">
+            <div class="p-2"><a href="">Tag 1</a></div>
+            <div class="p-2"><a href="">Tag 2</a></div>
+            <div class="p-2"><a href="">TagTag 3</a></div>
+            <div class="p-2"><a href="">Tag 4</a></div>
+            <div class="p-2"><a href="">TagTagTag 5</a></div>
+            <div class="p-2"><a href="">Tag 6</a></div>
+            <div class="p-2"><a href="">Tag 7</a></div>
+            <div class="p-2"><a href="">TagTagTag 8</a></div>
+            <div class="p-2"><a href="">Tag 9</a></div>
+          </div>
+
+        </div>
+        <div class="m-3 row">
+          <h3>Best members</h3>
+          <ul class="list-unstyled">
+            <li class="my-1 mx-2"><a href="">User1</a></li>
+            <li class="my-1 mx-2"><a href="">User2</a></li>
+            <li class="my-1 mx-2"><a href="">User3</a></li>
+            <li class="my-1 mx-2"><a href="">User4</a></li>
+            <li class="my-1 mx-2"><a href="">User5</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+

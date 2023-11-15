@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Don't ask me twice</title>
+  <link rel="stylesheet" href="../static/css/bootstrap.css">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <script src="../static/js/bootstrap.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light my-0 border-bottom">
+
+    <div class="col-2 my-0" id="block-title">
+        <a class="navbar-brand mx-sm-2"><b>Don't ask me twice</b></a>
+    </div>
+
+    <div class="col-8 navbar-collapse collapse" id="navbarNav">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Find your question" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+
+    <div class="col-2 d-flex flex-row align-items-center header-profile">
+      <div class="flex-shrink-0">
+        <img class="img-fluid m-1" src="../static/img/default_avatar.png" alt="Avatar" width="38" height="38">
+      </div>
+      <div class="user-actions">
+          <a class="mx-sm-2 user-action" href="">Settings</a>
+          <a class="mx-sm-2 user-action" href="">Log out</a>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="flex-shrink-0">
+    <div class="row mx-5">
+
+      <div class="col-9 my-3">
+
+
+<!--   Начало страницы вопроса     -->
+
+
+        <div class="card mt-3 my-card row question ">
+          <div class="row g-0">
+            <div class="col-2">
+              <div class="d-flex mt-4 align-items-center justify-content-center">
+                <img class="img-fluid rounded d-block q-user-avatar" src="../static/img/question.jpg" alt="User Avatar" width="50%">
+              </div>
+              <div class="d-flex my-2 align-items-center justify-content-center">
+                <button class="like-btn btn btn-sm my-0 mx-2">
+                  <img class="img-fluid" src="../static/img/like.png" alt="Like" width="20" height="20">
+                </button>
+                <div class="counter mx-1">
+                  <b>12</b>
+                </div>
+                <button class="dislike-btn btn btn-sm my-0 mx-2">
+                  <img class="img-fluid" src="../static/img/dislike.png" alt="Dislike" width="20" height="20">
+                </button>
+              </div>
+            </div>
+            <div class="col-10">
+              <div class="card-body">
+                <h5 class="card-title my-1">Question</h5>
+                <p class="card-text my-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text mt-2 mb-1">Tags: <a class="card-text" href="">tag1</a>  <a class="card-text" href="">tag2</a> <a class="card-text" href="">tag3</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="hr py-1">
+
+        <div class="col m-3" id="answers">
+
+          <div class="card mt-3 answer">
+            <div class="row g-0">
+              <div class="col-2">
+                <div class="d-flex mt-4 mb-3 align-items-center justify-content-center">
+                  <img class="img-fluid rounded d-block question-image relative-width" src="../static/img/default_avatar.png" alt="UserAvarat">
+                </div>
+                <div class="mb-2 d-flex align-items-center justify-content-center">
+                   <button class="like-btn btn btn-sm my-0 mx-2">
+                     <img class="img-fluid" src="../static/img/like.png" alt="Like" width="20" height="20">
+                   </button>
+                  <div class="counter mx-1">
+                    <b>4</b>
+                  </div>
+                   <button class="dislike-btn btn btn-sm my-0 mx-2">
+                     <img class="img-fluid" src="../static/img/dislike.png" alt="Dislike" width="20" height="20">
+                   </button>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="card-body">
+                  <h5 class="card-title my-1">Answer</h5>
+                  <p class="card-text my-2">This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="form-check custom-checkbox">
+                    <input class="form-check-input" type="checkbox" autocomplete="off" checked value="" id="checkbox1">
+                    <label class="form-check-label" for="checkbox1">
+                        Correct!
+                    </label>
+                  </div>
+                  <p class="card-text mt-2 mb-1"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mt-3 answer">
+            <div class="row g-0">
+              <div class="col-2">
+                <div class="d-flex mt-4 mb-3 align-items-center justify-content-center">
+                  <img class="img-fluid rounded d-block question-image relative-width" src="../static/img/default_avatar.png" alt="UserAvarat">
+                </div>
+                <div class="mb-2 d-flex align-items-center justify-content-center">
+                   <button class="like-btn btn btn-sm my-0 mx-2">
+                     <img class="img-fluid" src="../static/img/like.png" alt="Like" width="20" height="20">
+                   </button>
+                  <div class="counter mx-1">
+                    <b>2</b>
+                  </div>
+                   <button class="dislike-btn btn btn-sm my-0 mx-2">
+                     <img class="img-fluid" src="../static/img/dislike.png" alt="Dislike" width="20" height="20">
+                   </button>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="card-body">
+                  <h5 class="card-title my-1">Answer</h5>
+                  <p class="card-text my-2">This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="form-check custom-checkbox">
+                    <input class="form-check-input" type="checkbox" autocomplete="off" value="" id="checkbox1">
+                    <label class="form-check-label" for="checkbox1">
+                        Correct!
+                    </label>
+                  </div>
+                  <p class="card-text mt-2 mb-1"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="mb-2 mt-1 d-flex justify-content-center">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">10</a></li>
+              </ul>
+          </div>
+        </div>
+
+        <hr class="hr py-1">
+
+        <div class="row">
+          <form class="form" action="">
+            <div class="form-group">
+              <p class="mx-1" style="font-size: 1.3rem">Your Answer</p>
+              <textarea class="form-control" rows="3" placeholder="Enter your answer here..."></textarea>
+              <input class="btn btn-secondary btn-sm mt-3 my-5" type="submit" value="Answer">
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+
+  <!--   Конец страницы вопроса     -->
+
+
+      <div class="col-3 my-3">
+        <div class="m-3 row">
+          <h3>Popular Tags</h3>
+          <div class="d-flex flex-wrap">
+            <div class="p-2"><a href="">Tag 1</a></div>
+            <div class="p-2"><a href="">Tag 2</a></div>
+            <div class="p-2"><a href="">TagTag 3</a></div>
+            <div class="p-2"><a href="">Tag 4</a></div>
+            <div class="p-2"><a href="">TagTagTag 5</a></div>
+            <div class="p-2"><a href="">Tag 6</a></div>
+            <div class="p-2"><a href="">Tag 7</a></div>
+            <div class="p-2"><a href="">TagTagTag 8</a></div>
+            <div class="p-2"><a href="">Tag 9</a></div>
+          </div>
+
+        </div>
+        <div class="m-3 row">
+          <h3>Best members</h3>
+          <ul class="list-unstyled">
+            <li class="my-1 mx-2"><a href="">User1</a></li>
+            <li class="my-1 mx-2"><a href="">User2</a></li>
+            <li class="my-1 mx-2"><a href="">User3</a></li>
+            <li class="my-1 mx-2"><a href="">User4</a></li>
+            <li class="my-1 mx-2"><a href="">User5</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+

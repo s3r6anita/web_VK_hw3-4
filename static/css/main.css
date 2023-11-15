@@ -1,0 +1,40 @@
+#block-title {
+  min-width: 200px;
+}
+.header-profile {
+  min-width: 130px;
+}
+.user-action {
+    white-space: nowrap;
+}
+
+.question-image {
+  max-height: 50%;
+  max-width: 50%;
+}
+
+.question-descr {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.my-card{
+  background-color: #efefdf;
+}
+
+.like-btn, .dislike-btn {
+  width: 50%
+  height: 50%
+}
+.counter {
+  text-align: center;
+}
+.custom-checkbox input[type="checkbox"] {
+  pointer-events: none;
+}
+
+.errorMsg {
+  max-width: 20rem;
+}
