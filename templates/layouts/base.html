@@ -1,34 +1,37 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <title>Don't ask me twice</title>
-  <link rel="stylesheet" href="../static/css/bootstrap.css">
-  <link rel="stylesheet" href="../static/css/main.css">
-  <script src="../static/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static '/css/main.css' %}">
+  <script src="{% static '/js/bootstrap.js' %}"></script>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light my-0 border-bottom">
 
     <div class="col-2 my-0" id="block-title">
-        <a class="navbar-brand mx-sm-2"><b>Don't ask me twice</b></a>
+        <a class="navbar-brand mx-sm-2" href="{% url 'index' %}"><b>Don't ask me twice</b></a>
     </div>
 
-    <div class="col-8 navbar-collapse collapse" id="navbarNav">
+    <div class="col-7 navbar-collapse collapse" id="navbarNav">
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Find your question" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
 
-    <div class="col-2 d-flex flex-row align-items-center header-profile">
+    <div class="col-3 d-flex flex-row align-items-center header-profile">
+      <a href="{% url 'ask' %}"><button class="btn btn-success mx-4">Ask!</button></a>
       <div class="flex-shrink-0">
-        <img class="img-fluid m-1" src="../static/img/default_avatar.png" alt="Avatar" width="38" height="38">
+        <img class="img-fluid m-1" src="{% static 'img/default_avatar.png' %}" alt="Avatar" width="38" height="38">
       </div>
       <div class="user-actions">
-          <a class="mx-sm-2 user-action" href="">Settings</a>
-          <a class="mx-sm-2 user-action" href="">Log out</a>
+          <a class="mx-sm-2 user-action" href="{% url 'settings' %}">Settings</a>
+          <a class="mx-sm-2 user-action" href="{% url 'login' %}">Log out</a>
       </div>
     </div>
 
@@ -37,23 +40,23 @@
   <div class="flex-shrink-0">
     <div class="row mx-5">
 
-      <div class="col-9 my-3">
 
+
+      <div class="col-9 my-3">
+        {% block content %}
+        {% endblock %}
       </div>
+
+
 
       <div class="col-3 my-3">
         <div class="m-3 row">
           <h3>Popular Tags</h3>
+
           <div class="d-flex flex-wrap">
-            <div class="p-2"><a href="">Tag 1</a></div>
-            <div class="p-2"><a href="">Tag 2</a></div>
-            <div class="p-2"><a href="">TagTag 3</a></div>
-            <div class="p-2"><a href="">Tag 4</a></div>
-            <div class="p-2"><a href="">TagTagTag 5</a></div>
-            <div class="p-2"><a href="">Tag 6</a></div>
-            <div class="p-2"><a href="">Tag 7</a></div>
-            <div class="p-2"><a href="">TagTagTag 8</a></div>
-            <div class="p-2"><a href="">Tag 9</a></div>
+            {% for tag in tags %}
+            <div class="p-2"><a href="{% url 'tag' tag_name=tag%}">{{tag }}</a></div>
+            {% endfor %}
           </div>
 
         </div>
