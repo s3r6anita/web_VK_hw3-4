@@ -23,18 +23,24 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
-
-    <div class="col-3 d-flex flex-row align-items-center header-profile">
-      <a href="{% url 'ask' %}"><button class="btn btn-success mx-4">Ask!</button></a>
-      <div class="flex-shrink-0">
-        <img class="img-fluid m-1" src="{% static 'img/default_avatar.png' %}" alt="Avatar" width="38" height="38">
+    {%if user.is_authenticated%}
+      <div class="col-3 d-flex flex-row align-items-center header-profile">
+        <a href="{% url 'ask' %}"><button class="btn btn-success mx-4">Ask!</button></a>
+        <div class="flex-shrink-0">
+          <img class="img-fluid m-1" src="{% static 'img/default_avatar.png' %}" alt="Avatar" width="38" height="38">
+        </div>
+        <div class="user-actions">
+            {{user.first_name}}
+            <a class="mx-sm-2 user-action" href="{% url 'settings' %}">Settings</a>
+            <a class="mx-sm-2 user-action" href="{% url 'log_out' %}">Log out</a>
+        </div>
       </div>
-      <div class="user-actions">
-          <a class="mx-sm-2 user-action" href="{% url 'settings' %}">Settings</a>
-          <a class="mx-sm-2 user-action" href="{% url 'login' %}">Log out</a>
+    {% else %}
+      <div class="user-actions col-3">
+          <a class="mx-sm-2 user-action" href="{% url 'login' %}">Log in</a>
+          <a class="mx-sm-2 user-action" href="{% url 'signup' %}">Sign up</a>
       </div>
-    </div>
-
+    {%endif%}
   </nav>
 
   <div class="flex-shrink-0">
@@ -55,7 +61,7 @@
 
           <div class="d-flex flex-wrap">
             {% for tag in tags %}
-            <div class="p-2"><a href="{% url 'tag' tag_name=tag%}">{{tag }}</a></div>
+            <div class="p-2"><a href="{% url 'tag' tag_name=tag.name%}">{{ tag.name }}</a></div>
             {% endfor %}
           </div>
 

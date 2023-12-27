@@ -16,7 +16,7 @@
                   <img class="img-fluid" src="{% static '/img/like.png' %}" alt="Like" width="20" height="20">
                 </button>
                 <div class="counter mx-1">
-                  <b>{{ question.likes }}</b>
+                  <b>{{ question.likes_count }}</b>
                 </div>
                 <button class="dislike-btn btn btn-sm my-0 mx-2">
                   <img class="img-fluid" src="{% static '/img/dislike.png' %}" alt="Dislike" width="20" height="20">
@@ -27,7 +27,10 @@
               <div class="card-body">
                 <h5 class="card-title my-1">{{ question.title }}</h5>
                 <p class="card-text my-2">{{ question.text }}</p>
-                <p class="card-text mt-2 mb-1">Tags: <a class="card-text" href="">tag1</a>  <a class="card-text" href="">tag2</a> <a class="card-text" href="">tag3</a></p>
+                <p class="card-text mt-2 mb-1">Tags:
+                    {% for tag in question.tags.all  %}
+                    <a class="card-text" href="{% url 'tag' tag_name=tag.name %}">{{ tag.name }}</a>
+                    {% endfor %}</p>
               </div>
             </div>
           </div>
@@ -49,7 +52,7 @@
           <form class="form" action="">
             <div class="form-group">
               <p class="mx-1" style="font-size: 1.3rem">Your Answer</p>
-              <textarea class="form-control" rows="3" placeholder="Enter your answer here..."></textarea>
+              <textarea class="form-control" rows="3" placeholder="Enter your answer here..." maxlength="5000"></textarea>
               <input class="btn btn-secondary btn-sm mt-3 my-5" type="submit" value="Answer">
             </div>
           </form>
